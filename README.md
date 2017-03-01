@@ -1,4 +1,4 @@
-# HTML style guide
+# Guia de Estilo HTML
 
 <img
   src="https://raw.github.com/caiogondim/html-style-guide/master/logo.png"
@@ -6,18 +6,18 @@
   align="right"
 />
 
-> A style guide is about consistency. Consistency with this style guide is
-> important. Consistency within a project is more important. Consistency within
-> one module or function is most important.
+> Um guia de estilo é sobre consistência. Consistência neste guia de estilo é
+> importante. Consistência em um projeto é mais importante. Consistência em
+> um módulo ou função é ainda mais importante.
 >
-> But most importantly: know when to be inconsistent -- sometimes the style guide
-> just doesn't apply. When in doubt, use your best judgment. Look at other
-> examples and decide what looks best. And don't hesitate to ask!
+> Mas mais importante: saiba quando ser inconsistente -- às vezes esse guia de estilo
+> simplesmente não é aplicável. Quando estiver em dúvida, use seu melhor argumento. Veja por
+> exemplos de outros e decida o que parece melhor. E não hesite em perguntar:
 >
 > PEP 8, Python
 
 
-## Protocol
+## Protocolo
 
 Ommit the protocol (http:, https:) from URLs pointing to images, style sheets,
 scripts, unless they are not available in both protocols. That way, mixed
