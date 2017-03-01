@@ -19,33 +19,33 @@
 
 ## Protocolo
 
-Ommit the protocol (http:, https:) from URLs pointing to images, style sheets,
-scripts, unless they are not available in both protocols. That way, mixed
-content issues is prevented, because the URL is now relative.
+Omita o protocolo (http:, https:) das URLs apontando para imagens, folhas de estilo
+scripts, exceto se eles não tiverem disponíveis nos dois protocolos. Dessa forma, conteúdo
+mixo será prevenido, uma vez que a URL agora é relativa.
 
 ```html
-<!-- Good -->
+<!-- Bom -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
-<!-- Bad -->
+<!-- Ruim -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 ```
 ```css
-/* Good */
+/* Bom */
 .example {
    background: url(//caiogondim.com/img/logo.png);
 }
 
-/* Bad */
+/* Ruim */
 .example {
    background: url(http://caiogondim.com/img/logo.png);
 }
 ```
 
-## Indentation
+## Indentação
 
-Always use 2 spaces for indentation.
+Sempre use 2 espaços para indentação.
 
 ```html
 <html>
@@ -57,51 +57,51 @@ Always use 2 spaces for indentation.
 ```
 
 
-## Capitalization
+## Capitalização
 
-Use only lowercase.
+Use apenas letras minúsculas.
 
 ```html
-<!-- Bad -->
+<!-- Ruim -->
 <A HREF="/">Home</A>
 
-<!-- Good -->
+<!-- Bom -->
 <a href="/">Home</a>
 ```
 
 
-## Document type
+## Tipo de Documento
 
-Use HTML5. And use HTML syntax, not XHTML. Hixie
-[wrote some about it](http://hixie.ch/advocacy/xhtml).
+Use HTML5. E use síntaxe HTML, não XHTML. Hixie
+[escreveu um pouco sobre isso](http://hixie.ch/advocacy/xhtml) (O link é em inglês e não foi traduzido).
 
 ```html
-<!--- Bad -->
+<!--- Ruim -->
 <br />
 
-<!-- Good -->
+<!-- Bom -->
 <br>
 
-<!-- Good -->
+<!-- Bom -->
 <!doctype html>
 
-<!-- Bad -->
+<!-- Ruim -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 ```
 
 
-## Separation of Concerns
+## Separação de Referências
 
-In your templates and documents, use only (or strive for it) HTML. Put
-everything presentational into style sheets. And all the behavior in scripts
-files.
+Em seus templates e documentos, use apenas (ou se esforce para usar) HTML. Coloque
+tudo que for everything de apresentação em folhas de estilo. E todos os comportamentos em
+arquivos de script.
 
-Keep the contact area as small as possible by linking only the needed style
-sheets and scripts for the current document.
+Deixe a área de contato o mais simples possível, linkando apenas as folhas de estilos necessárias e
+os scripts para o documento atual.
 
 
 ```html
-<!-- Bad -->
+<!-- Ruim -->
 <!doctype html>
 <html>
 <head>
@@ -116,7 +116,7 @@ sheets and scripts for the current document.
   </script>
 </html>
 
-<!-- Good -->
+<!-- Bom -->
 <!doctype html>
 <html>
 <head>
@@ -132,77 +132,77 @@ sheets and scripts for the current document.
 ```
 
 
-## Entity references
+## Referências de entidades
 
-There is no need to use entity references like `&rdquo;` or `&mdash;` if you're
-using UTF-8 encoding. The only exceptions are to characters with special meaning
-to HTML, as `<`, `>` and `&`, or “invisible” characters, as no-break spaces.
+Não há necessidade de utilizar referências de entidades como `&rdquo;` ou `&mdash;` se vocÊ estiver
+utilizando a formatação UTF-8. As únicas exceções são os caracteres com significados especiais para o
+HTML, como `<`, `>` e `&`, ou caracteres "invisíveis" como espaços sem interrupção.
 
 ```html
-<!-- Bad -->
-The currency symbol for the Euro is &ldquo;&eur;&rdquo;.
+<!-- Ruim -->
+O símbolo da Moeda do Euro é &ldquo;&eur;&rdquo;.
 
-<!-- Good -->
-The currency symbol for the Euro is “€”.
+<!-- Bom -->
+O símbolo da Moeda do Euro é “€”.
 
-<!-- Ok, since we always want to “Mr.” and “Someone” to be together, and never in separate lines -->
+<!-- Ok, pois queremos sempre que "Mr." e "Alguém" fiquem juntos e nunca em linhas separadas -->
 Mr.&nbsp;Someone
 ```
 
 
-## Self-closing tags
+## Tags de fechamento automático
 
-Use the HTML5 way, not XHTML.
+Use a forma do HTML5 e não do XHTML.
 
 ```html
-<!-- Bad -->
+<!-- Ruim -->
 <br />
 <hr />
 
-<!-- Good -->
+<!-- Bom -->
 <br>
 <hr>
 ```
 
 
-## Attributes
+## Atributos
 
-Again, prefer the HTML5 way, not XHTML.
+Novamente, prefira a forma do HTML5 e não do XHTML.
 
 ```html
-<!-- Bad -->
+<!-- Ruim -->
 <input type="checkbox" checked="checked">
 
-<!-- Good -->
+<!-- Bom -->
 <input type="checkbox" checked>
 ```
 
 
-## Quotes
+## Aspas
 
-Always use double quotes.
+Use sempre duas aspas.
 
 ```html
-<!-- Bad -->
+<!-- Ruim -->
 <input type=checkbox>
 <input type='checkbox'>
 
-<!-- Good -->
+<!-- Bom -->
 <input type="checkbox">
 ```
 
 
-## Maximum line length
+## Máximo comprimento de linhas
 
-Try as hard as you can to keep line lenght slower than 80 columns. It improves
-readability and makes possible to use a 2 columns split view in your editor
-(your editor supports it, right?) without horizontal scroll.
+Tente o máximo que você puder em manter o comprimento da linha menor que 80 colunas.
+Melhora a legibilidade e torna possível usar visualização de duas colunas em seu editor
+(seu editor suporta isso, certo?) sem precisar de scroll horizontal.
 
 ```html
-<!-- Bad -->
+<!-- Ruim -->
 <img class="block__element" id="unicorn" src="http://cl.ly/image/1a1U013E002Z" alt="Unicorn, rainbows, poop and stuff" width="500">
 
-<!-- Good -->
+<!-- Bom -->
 <img
   class="block__element"
   id="unicorn"
@@ -212,11 +212,11 @@ readability and makes possible to use a 2 columns split view in your editor
 >
 ```
 
-Also, it's a good pratice to put every attribute in it's line, since Git doesn't
-show in a diff **what** in a line was modified, only that it's was modified.
+Além disso, é uma boa prática manter todos os atributos em linhas separadas, pois o Git não exibe num diff
+em qual linha **algo** foi modificado, apenas o que foi modificado em si.
 
 
-## Reference
+## Referências
 
-This documented is highly inspired in these others style guides:
+Este documento é altamente inspirado em outros guias de estilo:
 - [Google HTML/CSS Guide](https://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml)
